@@ -63,7 +63,12 @@ def process_request():
     employee_name = employee_dict.get("name")
 
     csv_file = open(f"{given_id}.csv", mode='w')
-    csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
+
+    csv_writer = csv.writer(
+            csv_file,
+            quoting=csv.QUOTE_ALL,
+            lineterminator='\n')
+
     for task in employee_tasks:
         csv_writer.writerow([
                 task.get("userId"),
