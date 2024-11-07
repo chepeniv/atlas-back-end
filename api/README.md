@@ -98,25 +98,25 @@ extend the python script to allow exporting to the json data format
 ```json
 { "USER_ID": [
 	{
-    "username": "USERNAME"
+    "username": "USERNAME",
     "task": "TASK_TITLE",
-    "completed": "TASK_COMPLETED_STATUS",
+    "completed": "TASK_COMPLETED_STATUS"
 	}, {
-    "username": "USERNAME"
+    "username": "USERNAME",
     "task": "TASK_TITLE",
-    "completed": "TASK_COMPLETED_STATUS",
+    "completed": "TASK_COMPLETED_STATUS"
 	}, ...
 ]},
 { "USER_ID": [
 	{
-    "username": "USERNAME"
+    "username": "USERNAME",
     "task": "TASK_TITLE",
-    "completed": "TASK_COMPLETED_STATUS",
+    "completed": "TASK_COMPLETED_STATUS"
 	}, {
-    "username": "USERNAME"
+    "username": "USERNAME",
     "task": "TASK_TITLE",
-    "completed": "TASK_COMPLETED_STATUS",
+    "completed": "TASK_COMPLETED_STATUS"
 	}, ...
 ]}...
 ```
-- filename: `dodo_all_employees.json`
+- filename: `todo_all_employees.json`
