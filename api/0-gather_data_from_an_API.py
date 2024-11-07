@@ -65,7 +65,7 @@ def process_request():
         done_tasks,
         total_tasks))
     for task in employee_done_tasks:
-        print(f"\t{task.get("title")}")
+        print("\t{}".format(task.get("title")))
 
 
 if __name__ == "__main__":
