@@ -77,6 +77,10 @@ def process_request():
                 task.get("title"),
                 ])
 
+    csv_file.close()
+    employee_get.close()
+    tasks_get.close()
+
 
 if __name__ == "__main__":
     process_request()
