@@ -60,7 +60,7 @@ def process_request():
         if task_dict.get("userId") == given_id:
             employee_tasks.append(task_dict)
 
-    employee_name = employee_dict.get("name")
+    username = employee_dict.get("username")
 
     csv_file = open(f"{given_id}.csv", mode='w')
 
@@ -72,7 +72,7 @@ def process_request():
     for task in employee_tasks:
         csv_writer.writerow([
                 task.get("userId"),
-                employee_name,
+                username,
                 task.get("completed"),
                 task.get("title"),
                 ])
