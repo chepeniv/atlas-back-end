@@ -57,11 +57,13 @@ def process_request():
             employee_done_tasks.append(task)
 
     total_tasks = len(employee_tasks)
-    total_done_tasks = len(employee_done_tasks)
+    done_tasks = len(employee_done_tasks)
+    employee_name = employee_dict.get("name")
 
-    print(f"\
-Employee {employee_dict.get("name")} is done with \
-tasks({total_done_tasks}/{total_tasks})")
+    print("Employee {} is done with tasks({}/{})".format(
+        employee_name,
+        done_tasks,
+        total_tasks))
     for task in employee_done_tasks:
         print(f"\t{task.get("title")}")
 
