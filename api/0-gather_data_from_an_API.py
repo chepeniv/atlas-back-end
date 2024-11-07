@@ -4,9 +4,9 @@ python script that uses a provided rest api to fetch an employee by id given
 and returns information about their todo list progress
 '''
 
+import requests
 from json.decoder import JSONDecoder
 from sys import argv
-import requests
 
 
 # https://jsonplaceholder.typicode.com
