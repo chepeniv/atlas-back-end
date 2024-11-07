@@ -3,6 +3,7 @@
 python script that uses a provided rest api to fetch an employee by id given
 and returns information about their todo list progress
 
+- use the `urllib` or `request` modules
 - accept an integer (employee id) as a param
 - display the employee todo list progress in this format :
 ----
@@ -14,17 +15,11 @@ task(NUMBER_OF_DONE_TASKS/TOTAL_NUMBER_OF_TASKS):
 
 from sys import argv
 import requests
-# import urllib
+import urllib
 
 
-# https://jsonplaceholder.typicode.com
-# routes: /todos, /todos/<idnum>
-# api: GET, POST, PUT, PATCH, DELETE
 def process_request():
-    '''
-    '''
-    if len(argv) < 2:
-        print("no employee id provided")
+    if not argv:
         return
 
     given_id = argv[1]
@@ -33,6 +28,10 @@ def process_request():
     except ValueError:
         print("invalid employee id provided")
         return
+
+
+
+
 
 
 if __name__ == "__main__":
