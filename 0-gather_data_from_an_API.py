@@ -41,10 +41,13 @@ def process_request():
     if employee_get.status_code == 200:
         todos_get = requests.get(
                 "https://jsonplaceholder.typicode.com/todos")
+        # get bytes and convert to string
         todos_string = todos_get.content.decode()
-        todos_dict = json_decoder.decode(todos_string)
-        for item in todos_dict:
-            print(f"{item}")
+        # convert json string to python object
+        todos_list = json_decoder.decode(todos_string)
+        for todo_dict in todos_list:
+            if todo_dict.get("userId") == given_id:
+                print(f"{todo_dict}")
     else:
         print("employee not found")
 
