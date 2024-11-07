@@ -27,10 +27,7 @@ from sys import argv
 def process_request():
     '''
     takes an integer representing a employee id from argv and writes the found
-    employee's todo list data in cvs data format to a file
-    ----
-    "id","username","completion_status","task_title"
-    ----
+    employee's todo list data in  json format to a file
     '''
     if len(argv) < 2:
         print("no employee id provided")
@@ -68,7 +65,6 @@ def process_request():
     for task_dict in tasks_list:
         if task_dict.get("userId") == given_id:
             employee_tasks.append(task_dict)
-
 
     json_file = open(f"{given_id}.json", mode='w')
 
