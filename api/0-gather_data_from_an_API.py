@@ -60,7 +60,7 @@ def process_request():
     done_tasks = len(employee_done_tasks)
     employee_name = employee_dict.get("name")
 
-    print("Employee {} is done with tasks({}/{})".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         employee_name,
         done_tasks,
         total_tasks))
